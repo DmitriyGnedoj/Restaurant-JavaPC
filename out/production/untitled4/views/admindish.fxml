@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.ControllerDish">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Блюда заведения" />
+      <TableView fx:id="tableDish" layoutX="4.0" layoutY="38.0" onMouseClicked="#handleRowSelect" prefHeight="310.0" prefWidth="569.0">
+        <columns>
+          <TableColumn fx:id="tableDishId" prefWidth="46.0" text="№" />
+          <TableColumn fx:id="tableDishName" prefWidth="153.0" text="Блюдо" />
+            <TableColumn fx:id="tableDishType" prefWidth="100.0" text="Тип" />
+            <TableColumn fx:id="tableDishPrice" prefWidth="79.0" text="Цена" />
+            <TableColumn prefWidth="75.0" text="Наценка %" fx:id="tableDishProcent"  />
+            <TableColumn prefWidth="115.0" text="Цена с наценкой" fx:id="tableDishPriceWithNacenka"/>
+        </columns>
+      </TableView>
+      <Text layoutX="581.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить  новое блюдо" />
+      <TextField fx:id="fieldAddNewDish" layoutX="580.0" layoutY="151.0" promptText="Блюдо" />
+      <Button layoutX="580.0" layoutY="213.0" mnemonicParsing="false" onAction="#createNewDish" text="Добавить" />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteField" text="Удалить" />
+      <Button layoutX="656.0" layoutY="213.0" mnemonicParsing="false" onAction="#editNameDish" text="Изменить" />
+      <Button layoutX="101.0" layoutY="361.0" mnemonicParsing="false" onAction="#test" text="Добавить инградиенті" />
+      <Label layoutX="580.0" layoutY="39.0" text="Поиск" />
+      <TextField fx:id="searchFieldDish" layoutX="581.0" layoutY="60.0" />
+      <Button layoutX="581.0" layoutY="94.0" mnemonicParsing="false" onAction="#searchDish" text="Search" />
+      <ComboBox fx:id="comboListTypes" layoutX="580.0" layoutY="180.0" prefWidth="150.0"  />
+   </children>
+</AnchorPane>

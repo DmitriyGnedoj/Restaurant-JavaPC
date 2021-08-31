@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="1149.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.ControllerWaiter">
+   <children>
+      <TableView fx:id="tableViewWaiter" onMouseClicked="#handleRowSelectWaiter" prefHeight="334.0" prefWidth="987.0">
+        <columns>
+          <TableColumn fx:id="tableViewWaiterId" prefWidth="34.0" text="№" />
+          <TableColumn fx:id="tableViewWaiterName" prefWidth="150.0" text="Имя" />
+            <TableColumn fx:id="tableViewWaiterAdress" prefWidth="153.0" text="Адрес" />
+            <TableColumn fx:id="tableViewWaiterTelephone" minWidth="3.0" prefWidth="94.0" text="Телефон" />
+            <TableColumn fx:id="tableViewWaiterLogin" minWidth="0.0" prefWidth="77.0" text="Логин" />
+            <TableColumn fx:id="tableViewWaiterPassword" prefWidth="73.0" text="Пароль" />
+            <TableColumn fx:id="tableViewWaiterRole" prefWidth="71.0" text="Роль" />
+            <TableColumn fx:id="tableViewWaiterAdressCafe" prefWidth="114.0" text="Адрес" />
+            <TableColumn fx:id="tableViewWaiterDirector" prefWidth="220.0" text="Директор" />
+        </columns>
+      </TableView>
+      <Button layoutX="1068.0" layoutY="338.0" mnemonicParsing="false" onAction="#editDataWaiter" text="Изменить" />
+      <Text layoutX="992.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление новой записи" />
+      <Text layoutX="992.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя официанта" />
+      <TextField fx:id="fieldNameWaiter" layoutX="991.0" layoutY="40.0" />
+      <Text layoutX="992.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" />
+      <TextField fx:id="fieldAdressWaiter" layoutX="991.0" layoutY="83.0" />
+      <Text layoutX="991.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон" />
+      <TextField fx:id="fieldTelephoneWaiter" layoutX="991.0" layoutY="128.0" />
+      <Button layoutX="991.0" layoutY="338.0" mnemonicParsing="false" onAction="#createNewWaiter" text="Добавить" />
+      <Text layoutX="992.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин" />
+      <TextField fx:id="fieldLoginWaiter" layoutX="992.0" layoutY="173.0" />
+      <Text layoutX="993.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" />
+      <TextField fx:id="fieldPasswordWaiter" layoutX="993.0" layoutY="215.0" />
+      <Button layoutX="14.0" layoutY="338.0" mnemonicParsing="false" onAction="#deleteDataWaiter" text="Удалить" />
+      <Text layoutX="993.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Роль" />
+      <ComboBox fx:id="role" layoutX="992.0" layoutY="260.0" prefWidth="150.0" />
+      <ComboBox fx:id="adress" layoutX="992.0" layoutY="308.0" prefWidth="150.0" />
+      <Text layoutX="995.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" />
+      <Button layoutX="80.0" layoutY="338.0" mnemonicParsing="false" text="Дополнительно" onAction="#more" />
+   </children>
+</AnchorPane>
